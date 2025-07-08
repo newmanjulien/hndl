@@ -366,7 +366,7 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
       </PageHeader>
 
       {/* Main Content */}
-      <Layout variant="page-content" className="py-8">
+      <Layout variant="workflow-content" className="py-8">
         {/* Workflow Title */}
         <div className="mb-6">
           <label htmlFor="workflowTitle" className="text-body">

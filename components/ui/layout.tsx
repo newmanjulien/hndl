@@ -10,6 +10,7 @@ const layoutVariants = cva("", {
       // Page layouts
       "page-header": "bg-white border-b border-gray-200 shadow-sm",
       "page-content": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      "workflow-content": "max-w-4xl mx-auto px-4 sm:px-6 lg:px-8",
       "page-inner": "flex items-center justify-between",
       // Step layouts
       "step-container": "bg-white rounded-lg border border-gray-200 p-4",
