@@ -239,7 +239,6 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
         steps: steps,
         isPlaybookWorkflow: isPlaybookWorkflow,
         playbook_description: playbookDescription,
-        playbook: null,
       };
 
       let response;
