@@ -14,7 +14,6 @@ import {
 } from "@/components/ui";
 import WorkflowHeader from "./WorkflowHeader";
 import WorkflowStep from "./WorkflowStep";
-import ConfirmationModal from "../shared/ConfirmationModal";
 
 const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
   const [workflowId, setWorkflowId] = useState(initialWorkflowId);
@@ -143,7 +142,11 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
           if (field === "executor" && value === "ai") {
             delete updatedStep.assignedHuman;
           }
-          if (field === "executor" && value === "human" && !step.assignedHuman) {
+          if (
+            field === "executor" &&
+            value === "human" &&
+            !step.assignedHuman
+          ) {
             updatedStep.assignedHuman = "Femi Ibrahim";
           }
           return updatedStep;
@@ -181,7 +184,13 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
 
   const handleBackClick = () => {
     if (hasUnsavedChanges) {
-      setIsModalOpen(true);
+      if (
+        window.confirm(
+          "You have unsaved changes that will be lost. Are you sure you want to leave?"
+        )
+      ) {
+        onNavigateBack();
+      }
     } else {
       onNavigateBack();
     }
@@ -370,7 +379,10 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
         onConfirm={handleConfirmLeave}
         title="Unsaved Changes"
       >
-        <p>You have unsaved changes that will be lost. Are you sure you want to leave?</p>
+        <p>
+          You have unsaved changes that will be lost. Are you sure you want to
+          leave?
+        </p>
       </ConfirmationModal>
     </div>
   );
