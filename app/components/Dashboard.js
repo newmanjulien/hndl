@@ -46,7 +46,6 @@ import {
   Tabs,
   TabsList,
   TabsTrigger,
-  TabsContent,
 } from "@/components/ui";
 
 const Dashboard = ({
@@ -499,38 +498,37 @@ const Dashboard = ({
         </Layout>
       </PageHeader>
 
-      {/* Main Content with Tabs */}
+      {/* Separate Tab Navigation Section */}
+      <div className="border-b border-gray-200 bg-white">
+        <Layout variant="page-content">
+          <Tabs value={activeSection} onValueChange={setActiveSection}>
+            <TabsList variant="navigation" className="w-full justify-start">
+              <TabsTrigger value="workflows" variant="navigation">
+                <Layout variant="space-x-2">
+                  <span>Workflows</span>
+                  <Badge variant="count" color="inactive">
+                    {workflows.filter((w) => !w.isPlaybookWorkflow).length}
+                  </Badge>
+                </Layout>
+              </TabsTrigger>
+              <TabsTrigger value="playbooks" variant="navigation">
+                <Layout variant="space-x-2">
+                  <span>Playbooks</span>
+                  <Badge variant="count" color="inactive">
+                    {workflows.filter((w) => w.isPlaybookWorkflow).length}
+                  </Badge>
+                </Layout>
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </Layout>
+      </div>
+
+      {/* Main Content */}
       <Layout variant="page-content" className="py-8">
-        <Tabs value={activeSection} onValueChange={setActiveSection}>
-          <TabsList variant="navigation" className="w-full justify-start">
-            <TabsTrigger value="workflows" variant="navigation">
-              <Layout variant="space-x-2">
-                <span>Workflows</span>
-                <Badge variant="count" color="inactive">
-                  {workflows.filter((w) => !w.isPlaybookWorkflow).length}
-                </Badge>
-              </Layout>
-            </TabsTrigger>
-            <TabsTrigger value="playbooks" variant="navigation">
-              <Layout variant="space-x-2">
-                <span>Playbooks</span>
-                <Badge variant="count" color="inactive">
-                  {workflows.filter((w) => w.isPlaybookWorkflow).length}
-                </Badge>
-              </Layout>
-            </TabsTrigger>
-          </TabsList>
-
-          <div className="mt-6">
-            <TabsContent value="workflows" className="mt-0">
-              {renderWorkflowsContent()}
-            </TabsContent>
-
-            <TabsContent value="playbooks" className="mt-0">
-              {renderPlaybooksContent()}
-            </TabsContent>
-          </div>
-        </Tabs>
+        {activeSection === "workflows"
+          ? renderWorkflowsContent()
+          : renderPlaybooksContent()}
       </Layout>
     </div>
   );
