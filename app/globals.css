@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===========================
+   BASE STYLES
+   =========================== */
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+}
+
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
+@layer components {
+  /* --- Main Headings --- */
+  .heading-secondary {
+    @apply text-lg font-medium text-gray-900;
+  }
+
+  .section-header {
+    @apply text-lg font-semibold text-gray-900;
+  }
+
+  /* --- Body Text --- */
+  .text-body {
+    @apply text-sm text-gray-700;
+  }
+
+  .text-muted {
+    @apply text-sm text-gray-200;
+  }
+
+  .disabled-gray-bg {
+    @apply bg-gray-50;
+  }
+
+  /* --- Workflow-Specific Typography --- */
+  .workflow-title {
+    @apply font-medium text-gray-900 truncate;
+  }
+
+  .workflow-description {
+    @apply text-sm text-gray-500 mt-1 line-clamp-2;
+  }
+
+  .workflow-summary {
+    @apply text-sm text-gray-600 whitespace-nowrap;
+  }
+}
