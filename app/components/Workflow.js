@@ -345,7 +345,7 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
                   variant={
                     showSavedState ? "saved" : isSaving ? "updating" : "primary"
                   }
-                  size="sm"
+                  size="lg"
                 >
                   {isSaving ? (
                     "Saving..."

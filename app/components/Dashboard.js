@@ -488,7 +488,7 @@ const Dashboard = ({
               </Layout>
               <Layout variant="header-right">
                 {activeSection === "workflows" && (
-                  <Button onClick={onCreateNew} variant="primary" size="sm">
+                  <Button onClick={onCreateNew} variant="primary" size="lg">
                     <Plus className="w-4 h-4" />
                     New workflow
                   </Button>
