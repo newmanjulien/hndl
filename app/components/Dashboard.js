@@ -505,7 +505,7 @@ const Dashboard = ({
             <TabsList variant="navigation" className="w-full justify-start">
               <TabsTrigger value="workflows" variant="navigation">
                 <Layout variant="space-x-2">
-                  <span>Workflows</span>
+                  <span>My workflows</span>
                   <Badge variant="count" color="inactive">
                     {workflows.filter((w) => !w.isPlaybookWorkflow).length}
                   </Badge>
