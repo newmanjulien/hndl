@@ -69,28 +69,28 @@ const Dashboard = ({
       id: "failing-to-close",
       title: "Rep is failing to close deals",
       description:
-        "Comprehensive playbooks designed to help sales reps overcome common obstacles in the deal closure process, including objection handling, pricing negotiations, and timing issues.",
+        "We are creating playbooks for the common ways reps miss quota. Playbooks will make it quick and easy to help your rep. Each playbook will contain pre-programmed workflows based on best practices from top Sales Managers. And each workflow will be fully customizable so you can make them fit your specific process",
       icon: Target,
     },
     {
       id: "deals-drop-off",
       title: "Deals drop off in negotiation",
       description:
-        "Strategic approaches to prevent deal abandonment during critical negotiation phases, with focus on maintaining momentum and addressing buyer concerns.",
+        "We are creating playbooks for the common ways reps miss quota. Playbooks will make it quick and easy to help your rep. Each playbook will contain pre-programmed workflows based on best practices from top Sales Managers. And each workflow will be fully customizable so you can make them fit your specific process",
       icon: Zap,
     },
     {
       id: "not-moving-forward",
       title: "Rep is not moving deals forward in earlier stages",
       description:
-        "Tactical workflows to accelerate deal progression through discovery, qualification, and proposal stages with systematic follow-up strategies.",
+        "We are creating playbooks for the common ways reps miss quota. Playbooks will make it quick and easy to help your rep. Each playbook will contain pre-programmed workflows based on best practices from top Sales Managers. And each workflow will be fully customizable so you can make them fit your specific process",
       icon: Rocket,
     },
     {
       id: "acv-off-whack",
       title: "ACV optimization strategies",
       description:
-        "Data-driven approaches to optimize Annual Contract Value through upselling, cross-selling, and strategic pricing adjustments.",
+        "We are creating playbooks for the common ways reps miss quota. Playbooks will make it quick and easy to help your rep. Each playbook will contain pre-programmed workflows based on best practices from top Sales Managers. And each workflow will be fully customizable so you can make them fit your specific process",
       icon: DollarSign,
     },
   ];
