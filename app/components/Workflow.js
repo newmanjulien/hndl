@@ -480,7 +480,7 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
                                   onClick={() => moveStepUp(index)}
                                   disabled={index === 0}
                                   variant="move"
-                                  size="icon-xs"
+                                  size="iconxs"
                                   title="Move step up"
                                 >
                                   <ChevronUp className="w-4 h-4" />
@@ -489,7 +489,7 @@ const Workflow = ({ workflowId: initialWorkflowId = null, onNavigateBack }) => {
                                   onClick={() => moveStepDown(index)}
                                   disabled={index === steps.length - 1}
                                   variant="move"
-                                  size="icon-xs"
+                                  size="iconxs"
                                   title="Move step down"
                                 >
                                   <ChevronDown className="w-4 h-4" />
