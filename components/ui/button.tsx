@@ -12,8 +12,8 @@ const buttonVariants = cva(
         default: "bg-primary text-primary-foreground hover:bg-primary/90",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        // outline:
+        //   "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -21,7 +21,7 @@ const buttonVariants = cva(
         primary:
           "bg-green-600 hover:bg-green-700 text-white border-green-600 hover:border-green-700 shadow-sm",
         delete:
-          "text-red-600 hover:text-red-700 hover:bg-red-50 focus:ring-red-500 border border-transparent hover:border-red-300 [&_svg]:w-3 [&_svg]:h-3",
+          "text-red-600 hover:text-red-700 hover:bg-red-50 focus:ring-red-500 [&_svg]:w-3 [&_svg]:h-3",
         edit: "text-gray-600 hover:text-gray-800 hover:bg-gray-100 border-transparent",
         back: "text-gray-500 hover:text-gray-700 hover:bg-gray-100 border-transparent",
         run: "bg-gray-100 hover:bg-gray-200 text-gray-700 border-gray-300 hover:border-gray-400",
