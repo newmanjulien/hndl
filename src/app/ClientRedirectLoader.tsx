@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { Loader } from "../components/Loader"; // adjust path as needed
 
 export default function ClientRedirectLoader() {
   const router = useRouter();
@@ -11,9 +12,5 @@ export default function ClientRedirectLoader() {
     router.push("/dashboard/agents");
   }, [router]);
 
-  return (
-    <div className="flex h-screen w-screen items-center justify-center bg-background">
-      <div className="loader" />
-    </div>
-  );
+  return <Loader size={60} />; // show full-screen loader
 }
