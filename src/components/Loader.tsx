@@ -6,8 +6,8 @@ export function Loader({ size = 10 }: { size?: number }) {
     <div className="flex h-screen w-screen items-center justify-center bg-background">
       <div
         style={{
-          border: `${size / 8}px solid #f3f3f3`,
-          borderTop: `${size / 8}px solid #d3d3d3`,
+          border: `${size / 10}px solid #f3f3f3`,
+          borderTop: `${size / 10}px solid #d3d3d3`,
           borderRadius: "50%",
           width: size,
           height: size,
