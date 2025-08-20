@@ -1,7 +1,6 @@
 // /src/app/page.tsx
-import { redirect } from "next/navigation";
+import ClientRedirectLoader from "./ClientRedirectLoader";
 
 export default function Home() {
-  // You can pick whichever dashboard subpage should be the default
-  redirect("/dashboard/agents");
+  return <ClientRedirectLoader />;
 }
